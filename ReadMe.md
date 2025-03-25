@@ -2,7 +2,7 @@
 
 #### Windows
 
-  git clone <https://github.com/Joseph-Ndungi/reports-api.git>
+  git clone <https://github.com/CarlvinJerry/reports-api.git>
 
 #### Create virtual environment
 
@@ -10,7 +10,7 @@
 
 #### Activate the environment
 
-    venv\Scripts\activate
+    .venv\Scripts\activate
 
 #### Install the requirements
 

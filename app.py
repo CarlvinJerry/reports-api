@@ -1,13 +1,15 @@
 from flask import Flask, request, send_file, jsonify
+from flask_cors import CORS, cross_origin
 import pandas as pd
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 import io
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.utils import simpleSplit
+from fastapi import FastAPI
 
-app = Flask(__name__)
-
+app = Flask(__name__) #FastAPI("Reporter") #
+CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST"], "allow_headers": ["Content-Type"]}})
 
 @app.route("/")
 def generateReport():
