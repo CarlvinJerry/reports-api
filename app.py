@@ -1,4 +1,3 @@
-
 from flask import Flask, request, send_file, jsonify
 from flask_cors import CORS
 import tempfile
@@ -74,7 +73,7 @@ def generate_report():
         return jsonify({"error": str(e)}), 500
 
 
-@app.route("/generate_student_report/<int:student_id>", methods=["POST"])
+@app.route("/generate_student_report/<student_id>", methods=["POST"])
 def generate_student_report_endpoint(student_id):
     try:
         # Get JSON data from request
