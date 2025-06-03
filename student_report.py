@@ -1,5 +1,7 @@
 import json
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Set the backend to non-interactive 'Agg'
 import matplotlib.pyplot as plt
 from io import BytesIO
 from typing import Dict, List, Any
@@ -555,7 +557,7 @@ def process_student_data(raw_data: List[Dict[str, Any]], student_id: str) -> Dic
 
     Args:
         raw_data (List[Dict[str, Any]]): Raw data from JSON file
-        student_id (int): ID of the student to process
+        student_id (str): ID of the student to process
     
     Returns:
         Dict[str, Any]: Processed student data with summary statistics
